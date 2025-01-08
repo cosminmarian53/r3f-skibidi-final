@@ -13,6 +13,7 @@ export const UI = () => {
     setSkibidi(true);
     setWiggle(withWiggle);
     audio.current.play();
+    audio.volume = 0.1;
     audio.current.loop = true;
   };
   const stopSkibidi = () => {
@@ -24,34 +25,28 @@ export const UI = () => {
 
   return (
     <main className="pointer-events-none fixed z-10 inset-0 p-10 flex justify-between flex-col">
-      <a
-        className="pointer-events-auto"
-        href="https://lessons.wawasensei.dev/courses/react-three-fiber"
-      >
-        <img className="w-20" src="/images/wawasensei-white.png" />
-      </a>
       <div className="flex items-center justify-center gap-4">
         {skibidi ? (
           <button
-            className="pointer-events-auto bg-white/70 hover:bg-white transition-colors duration-200 text-black px-8 py-3 rounded-full font-bold text-xl uppercase"
+            className="pointer-events-auto bg-white/50 hover:bg-white transition-colors duration-200 text-black px-8 py-3 rounded-full font-bold text-xl uppercase"
             onClick={stopSkibidi}
           >
-            Stop
+            Stop Dancing
           </button>
         ) : (
           <>
             <button
-              className="w-40 pointer-events-auto bg-white/70 hover:bg-white transition-colors duration-200 text-black  py-3 rounded-full font-bold text-xl uppercase"
+              className="w-40 pointer-events-auto bg-white/70 hover:bg-white transition-colors duration-200 text-black  py-3 p-2 rounded-full font-bold text-lg uppercase"
               onClick={() => startSkibidi(false)}
             >
-              Start{" "}
+              Start Dancing{" "}
               <div className="text-xs -mt-1 font-medium">(without wiggle)</div>
             </button>
             <button
-              className="w-40 pointer-events-auto bg-white/70 hover:bg-white transition-colors duration-200 text-black  py-3 rounded-full font-bold text-xl uppercase"
+              className="w-40 pointer-events-auto bg-white/70 hover:bg-white transition-colors duration-200 text-black  py-3 p-2 rounded-full font-bold text-lg uppercase"
               onClick={() => startSkibidi(true)}
             >
-              Start{" "}
+              Start Dancing{" "}
               <div className="text-xs -mt-1 font-medium">(with wiggle)</div>
             </button>
           </>

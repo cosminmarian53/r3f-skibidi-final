@@ -1,4 +1,4 @@
-import { Environment, Float, Gltf, TransformControls } from "@react-three/drei";
+import { Environment, Float, Gltf, OrbitControls } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useAtom } from "jotai";
 import { useRef } from "react";
@@ -45,9 +45,8 @@ export const Experience = () => {
           <Gltf scale={0.2} src="/models/Kebab.glb" castShadow />
         </Float>
       </group>
-      <TransformControls mode="translate" position-y={1}>
-        <Skibidi animation={skibidi ? "Dance" : "Waving"} position-y={-1} />
-      </TransformControls>
+      <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false} />
+      <Skibidi animation={skibidi ? "Dance" : "Waving"} position-y={0} />
       <directionalLight position={[0, 2, 5]} intensity={2.5} castShadow />
       <pointLight position={[0, 1, 2]} intensity={20.5} />
       <directionalLight position={[-1, 0, -5]} intensity={5} color={"red"} />
