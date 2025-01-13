@@ -28,7 +28,7 @@ export const UI = () => {
       <div className="flex items-center justify-center gap-4">
         {skibidi ? (
           <button
-            className="pointer-events-auto bg-white/50 hover:bg-white transition-colors duration-200 text-black px-8 py-3 rounded-full font-bold text-xl uppercase"
+            className="w-40 pointer-events-auto bg-orange-700 hover:bg-orange-900 text-white font-bold py-2 px-4 rounded uppercase"
             onClick={stopSkibidi}
           >
             Stop Dancing
@@ -36,14 +36,14 @@ export const UI = () => {
         ) : (
           <>
             <button
-              className="w-40 pointer-events-auto bg-white/70 hover:bg-white transition-colors duration-200 text-black  py-3 p-2 rounded-full font-bold text-lg uppercase"
+              className="w-40 pointer-events-auto bg-orange-700 hover:bg-orange-900 text-white font-bold py-2 px-4 rounded uppercase"
               onClick={() => startSkibidi(false)}
             >
               Start Dancing{" "}
               <div className="text-xs -mt-1 font-medium">(without wiggle)</div>
             </button>
             <button
-              className="w-40 pointer-events-auto bg-white/70 hover:bg-white transition-colors duration-200 text-black  py-3 p-2 rounded-full font-bold text-lg uppercase"
+              className="w-40 pointer-events-auto bg-orange-700 hover:bg-orange-900 text-white font-bold py-2 px-4 rounded uppercase"
               onClick={() => startSkibidi(true)}
             >
               Start Dancing{" "}
